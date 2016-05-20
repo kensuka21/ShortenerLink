@@ -1,0 +1,27 @@
+<div class="row">
+  <form class="col s12" ng-submit="shortenUrl()">
+    <div class="row">
+      <h6 class="center-align"><strong>Put your Long URL here: </strong></h6>
+
+      <div class="input-field col s9">
+
+        <input id="longUrl" ng-model="longUrl" type="text" class="validate">
+        <label for="longUrl" data-error="wrong" data-success="right">Link</label>
+      </div>
+      <div class="input-field col s3">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Shorten URL
+        </button>
+      </div>
+    </div>
+  </form>
+  <div class="">
+    <h6 class="center-align"><strong>Short URL: </strong></h6>
+    <div class="input-field white-text card blue-grey col s12">
+      <input id="shortUrl" type="text" ng-model="shortUrl" readonly>
+    </div>
+    <div class="col s12 center-align">
+      <button ng-click="copyText()" ng-show="shortUrl" class="btn waves-effect disabled" type="submit" name="action">Copy
+      </button>
+    </div>
+  </div>
+</div>
