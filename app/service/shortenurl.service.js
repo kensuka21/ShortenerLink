@@ -9,9 +9,9 @@ angular.module('shortenerLinkApp')
       var data = {
         longUrl: longUrl
       }
-      $http.post('https://www.googleapis.com/urlshortener/v1/url?key=AIzaSyDlh3SIls-oZcqr_RPo3ts-rx4jCFXJE6I', JSON.stringify(data))
+      $http.post('https://shortenerlinkapi.herokuapp.com/api/shortenerlink', JSON.stringify(data))
         .then(function (response) {
-          callback(response.data.id);
+          callback(response.data.shortUrl);
         }, function (response) {
           Materialize.toast('Insert the URL', 4000)
         });
