@@ -1,7 +1,6 @@
 # shortener-link
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+This is a side project to make short links consuming a Google's API.
 
 ## Build & development
 
